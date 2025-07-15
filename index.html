@@ -151,12 +151,41 @@
             <p>Melalui Seminar Hasil ini, diharapkan mahasiswa dapat memperoleh umpan balik yang berarti untuk menyempurnakan penelitian sebelum tahap akhir. Kegiatan ini juga menjadi bukti bahwa proses ilmiah yang dijalankan tidak hanya bersifat individual, tetapi melibatkan evaluasi dan masukan dari komunitas akademik. Semoga kegiatan ini dapat menjadi langkah maju dalam mencetak lulusan yang kritis, kompeten, dan siap berkontribusi di dunia profesional maupun akademik.</p>
             <br>
     
-
-
-
         </div>
     </main>
 
+<script>
+  // Blok tombol shortcut developer tools
+  document.addEventListener('keydown', function (e) {
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C' || e.key === 'J')) ||
+      (e.ctrlKey && e.key === 'U') ||
+      (e.ctrlKey && e.key === 'S')
+    ) {
+      e.preventDefault();
+      alert("Akses ini dibatasi oleh administrator situs.");
+      return false;
+    }
+  });
+
+  // Blok klik kanan
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    alert("Klik kanan dinonaktifkan.");
+  });
+
+  // Blok seleksi teks
+  document.addEventListener('selectstart', function (e) {
+    e.preventDefault();
+  });
+
+  // Blok drag (gambar, teks, dsb.)
+  document.addEventListener('dragstart', function (e) {
+    e.preventDefault();
+  });
+</script>
+    
 </body>
 
 </html>
